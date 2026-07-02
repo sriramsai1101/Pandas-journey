@@ -1,0 +1,11 @@
+import pandas as pd 
+marks=pd.read_csv("marks.csv")
+print(marks)
+print('average marks of python: ')
+print(marks["python"].mean())
+print("average marks of pandas: ")
+print(marks["pandas"].mean())
+print("average marks of numpy: ")
+print(marks["numpy"].mean())
+print('topper for python:')
+print(marks.loc[marks["python"].idxmax(), "marks"])
